@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import Image from "next/image";
 import styles from '../style/MenubarVerticalAdmin.module.css';
 
 const defaultStacks = [
@@ -153,7 +155,7 @@ function MenubarVerticalAdmin() {
                     style={{ border: section.selectedStacks.some(s => s.name === stack.name) ? '1px solid #2563eb' : '1px solid #eee', cursor: 'pointer' }}
                     onClick={() => handleSelectStack(idx, stack)}
                   >
-                    <img src={stack.icon} alt={stack.name} style={{ width: 22, height: 22, borderRadius: 4 }} />
+                    <Image src={stack.icon} alt={stack.name} width={22} height={22} style={{ borderRadius: 4 }} />
                     <span>{stack.name}</span>
                     <span style={{ fontSize: 12, color: '#888' }}>{stack.category}</span>
                     {section.selectedStacks.some(s => s.name === stack.name) && (
@@ -192,7 +194,7 @@ function MenubarVerticalAdmin() {
               )}
               {section.imageUrl && (
                 <div style={{ marginTop: 10 }}>
-                  <img src={section.imageUrl} alt="uploaded" style={{ maxWidth: '100%', maxHeight: 120, borderRadius: 8 }} />
+                  <Image src={section.imageUrl} alt="uploaded" width={120} height={120} style={{ maxWidth: '100%', maxHeight: 120, borderRadius: 8 }} />
                 </div>
               )}
             </div>

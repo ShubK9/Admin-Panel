@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+
+import Image from "next/image";
 import styles from "../style/ComparisonSection.module.css";
 
 const menuOptions = [
@@ -174,7 +176,7 @@ export default function ComparisonSection() {
             {contentMap[selected]?.bullets?.map((b, i) => <li key={i}>{b}</li>)}
           </ul>
           <div className={styles.leftBoxImageWrap}>
-            <img src={contentMap[selected]?.image || ''} alt="section visual" className={styles.leftBoxImage} />
+            <Image src={contentMap[selected]?.image || ''} alt="section visual" className={styles.leftBoxImage} width={80} height={80} />
           </div>
         </div>
         {contentMap[selected]?.deal && (
@@ -182,7 +184,7 @@ export default function ComparisonSection() {
             <div className={styles.dealBoxLeft}>
               <div className={styles.dealToolCard}>
                 <div className={styles.dealToolHeader}>
-                  <img src={contentMap[selected].deal.logo} alt={contentMap[selected].deal.tool} className={styles.dealToolLogo} />
+                  <Image src={contentMap[selected].deal.logo} alt={contentMap[selected].deal.tool} className={styles.dealToolLogo} width={40} height={40} />
                   <div>
                     <div className={styles.dealToolNameRow}>
                       <span className={styles.dealToolName}>{contentMap[selected].deal.tool}</span>

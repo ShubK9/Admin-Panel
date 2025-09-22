@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+
+import Image from "next/image";
 import styles from "../style/Navbar.module.css";
 
 export default function Navbar() {
@@ -21,7 +23,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.logoLeft}>
         <Link href="/" className={styles.logo}>
-          <img src="/logo.png" alt="DealYouNeed Logo" className={styles.logoImg} />
+          <Image src="/logo.png" alt="DealYouNeed Logo" className={styles.logoImg} width={40} height={40} />
         </Link>
       </div>
       <div className={styles.menuCenter}>

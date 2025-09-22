@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import styles from "../style/ComparisonSection.module.css";
 import { FaXTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6";
 
@@ -41,7 +42,7 @@ export default function Footer() {
     <footer className={styles.footerSection}>
       <div className={styles.footerTop}>
         <div className={styles.footerColLogo}>
-          <img src="/logo.png" alt="DealYouNeed Logo" className={styles.footerLogo} />
+          <Image src="/logo.png" alt="DealYouNeed Logo" className={styles.footerLogo} width={40} height={40} />
           <div className={styles.footerDesc}>
             Making software subscriptions<br />more accessible and affordable.
           </div>

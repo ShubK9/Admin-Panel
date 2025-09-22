@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import Image from "next/image";
 import styles from '../style/ToolsFaceOffAdmin.module.css';
 
 const defaultComparisons = [
@@ -83,9 +85,9 @@ function ToolsFaceOffAdmin() {
           {comparisons.map((c, idx) => (
             <div className={styles.comparisonCard} key={idx}>
               <div className={styles.cardLogos}>
-                <img src={c.left.logo} alt={c.left.name} className={styles.logoImg} />
+                <Image src={c.left.logo} alt={c.left.name} className={styles.logoImg} width={40} height={40} />
                 <span className={styles.vsCircle}>vs</span>
-                <img src={c.right.logo} alt={c.right.name} className={styles.logoImg} />
+                <Image src={c.right.logo} alt={c.right.name} className={styles.logoImg} width={40} height={40} />
               </div>
               <div className={styles.cardTitle}>{c.title}</div>
               <div className={styles.cardBadge}>• {c.badge}</div>
@@ -130,9 +132,9 @@ function ToolsFaceOffAdmin() {
         {filteredComparisons.map((c, idx) => (
           <div className={styles.comparisonCard} key={idx}>
             <div className={styles.cardLogos}>
-              <img src={c.left.logo} alt={c.left.name} className={styles.logoImg} />
+              <Image src={c.left.logo} alt={c.left.name} className={styles.logoImg} width={40} height={40} />
               <span className={styles.vsCircle}>vs</span>
-              <img src={c.right.logo} alt={c.right.name} className={styles.logoImg} />
+              <Image src={c.right.logo} alt={c.right.name} className={styles.logoImg} width={40} height={40} />
             </div>
             <div className={styles.cardTitle}>{c.title}</div>
             <div className={styles.cardBadge}>• {c.badge}</div>

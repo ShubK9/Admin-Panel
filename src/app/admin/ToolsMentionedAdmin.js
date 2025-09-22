@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+
+import Image from "next/image";
 import styles from "../style/ToolsMentionedAdmin.module.css";
 
 const defaultTools = [
@@ -61,7 +63,7 @@ export default function ToolsMentionedAdmin() {
 					{tools.map((tool, idx) => (
 						<div className={styles.toolCard} key={idx}>
 							<span className={styles.dragHandle}>⋮⋮</span>
-							<img src={tool.logo} alt={tool.name} className={styles.logo} />
+							<Image src={tool.logo} alt={tool.name} className={styles.logo} width={40} height={40} />
 							<div className={styles.toolInfo}>
 								<span className={styles.toolName}>
 									{tool.name}{" "}

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import styles from "../style/ComparisonSection.module.css";
 
 const comparisons = [
@@ -42,9 +43,9 @@ export default function ToolsFaceOff() {
         {comparisons.map((c, i) => (
           <div className={styles.faceoffCard} key={i}>
             <div className={styles.faceoffLogosRow}>
-              <img src={c.leftLogo} alt="left logo" className={styles.faceoffLogo} />
+              <Image src={c.leftLogo} alt="left logo" className={styles.faceoffLogo} width={40} height={40} />
               <span className={styles.faceoffVs}>vs</span>
-              <img src={c.rightLogo} alt="right logo" className={styles.faceoffLogo} />
+              <Image src={c.rightLogo} alt="right logo" className={styles.faceoffLogo} width={40} height={40} />
             </div>
             <div className={styles.faceoffCardTitle}>{c.title}</div>
             <div className={styles.faceoffCardSubtitle}><span className={styles.faceoffDot}>•</span> {c.subtitle}</div>

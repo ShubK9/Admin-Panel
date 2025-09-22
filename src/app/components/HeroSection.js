@@ -1,6 +1,8 @@
 
 "use client";
 import { useEffect, useState } from "react";
+
+import Image from "next/image";
 import styles from "../style/HeroSection.module.css";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
@@ -64,10 +66,10 @@ export default function HeroSection() {
         <div className={styles.heroImgWrap}>
           <div className={styles.compareBox}>
             <div className={`${styles.circle} ${styles.circleTopLeft}`}>
-              <img src={upperIconUrl} alt="Upper Card Icon" width={64} height={64} />
+              <Image src={upperIconUrl} alt="Upper Card Icon" width={64} height={64} />
             </div>
             <div className={`${styles.circle} ${styles.circleBottomRight}`}>
-              <img src={lowerIconUrl} alt="Lower Card Icon" width={64} height={64} />
+              <Image src={lowerIconUrl} alt="Lower Card Icon" width={64} height={64} />
             </div>
             <div className={styles.diagonal}></div>
           </div>

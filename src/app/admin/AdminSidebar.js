@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+
+import Image from "next/image";
 import styles from "../style/AdminSidebar.module.css";
 import layoutStyles from "../style/AdminLayout.module.css";
 import { FaTachometerAlt, FaBoxOpen, FaUsers, FaHandshake, FaSyncAlt, FaCubes, FaGlobe, FaCog, FaQuestionCircle, FaUserShield, FaSun, FaSignOutAlt } from "react-icons/fa";
@@ -15,7 +17,7 @@ export default function AdminSidebar({ open, onClose }) {
         <FaTimes />
       </button>
       <div className={styles.logoRow}>
-        <img src="/logo2.png" alt="DealYouNeed Logo" className={styles.logo} />
+  <Image src="/logo2.png" alt="DealYouNeed Logo" className={styles.logo} width={40} height={40} />
         <span className={styles.logoText}>DealYouNeed</span>
       </div>
       <div className={styles.sectionTitle}>Your Quick Tabs</div>

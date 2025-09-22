@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+
+import Image from "next/image";
 import styles from "../style/HeroSectionAdmin.module.css";
 import HeroAdminHeader from "./HeroAdminHeader";
 
@@ -101,7 +103,7 @@ export default function HeroSectionAdmin() {
               </label>
               {upperIconUrl && (
                 <div className={styles.adminHeroUploadPreviewBox}>
-                  <img src={upperIconUrl} alt="Upper Card Icon" className={styles.adminHeroUploadImg} />
+                  <Image src={upperIconUrl} alt="Upper Card Icon" className={styles.adminHeroUploadImg} width={64} height={64} />
                 </div>
               )}
             </div>
@@ -114,7 +116,7 @@ export default function HeroSectionAdmin() {
               </label>
               {lowerIconUrl && (
                 <div className={styles.adminHeroUploadPreviewBox}>
-                  <img src={lowerIconUrl} alt="Lower Card Icon" className={styles.adminHeroUploadImg} />
+                  <Image src={lowerIconUrl} alt="Lower Card Icon" className={styles.adminHeroUploadImg} width={64} height={64} />
                 </div>
               )}
             </div>

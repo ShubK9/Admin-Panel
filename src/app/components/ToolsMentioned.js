@@ -1,3 +1,5 @@
+
+import Image from "next/image";
 import styles from "../style/ToolsMentioned.module.css";
 
 export default function ToolsMentioned({ data }) {
@@ -43,7 +45,7 @@ export default function ToolsMentioned({ data }) {
             <div className={styles.toolCardMain}>
               <div className={styles.toolCardRow1}>
                 <div className={styles.toolLogoNameRow}>
-                  <img src={tool.logo} alt={tool.name} className={styles.toolLogo} />
+                  <Image src={tool.logo} alt={tool.name} className={styles.toolLogo} width={40} height={40} />
                   <div className={styles.toolNameSubtitleCol}>
                     <div className={styles.toolName}>
                       {tool.name} {tool.verified && <span className={styles.verified}>✔️</span>}
