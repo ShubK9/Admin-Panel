@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 import styles from "../style/AdminTopbar.module.css";
 import { FaBell, FaQuestionCircle, FaBars } from "react-icons/fa";
 
@@ -36,19 +38,23 @@ export default function AdminTopbar({ onOpenSidebar }) {
           <FaQuestionCircle />
         </button>
         <div className={styles.profileWrap + " " + styles.showOnMobile}>
-          <img
+          <Image
             src="/Notion-Logo.png"
             alt="Admin Avatar"
             className={styles.avatar}
+            width={40}
+            height={40}
           />
           <span className={styles.profileName}>Admin</span>
           <span className={styles.profileArrow}>▼</span>
         </div>
         <div className={styles.profileWrap + " " + styles.hideOnMobile}>
-          <img
+          <Image
             src="/Notion-Logo.png"
             alt="Admin Avatar"
             className={styles.avatar}
+            width={40}
+            height={40}
           />
           <span className={styles.profileName}>Admin</span>
           <span className={styles.profileArrow}>▼</span>

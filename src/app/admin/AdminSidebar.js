@@ -27,7 +27,7 @@ export default function AdminSidebar({ open, onClose }) {
         <li><FaHandshake /><span>Partners</span></li>
         <li><FaUsers /><span>Users</span></li>
         <li><FaSyncAlt /><span>SaaS Swap</span></li>
-        <li><FaCubes /><span>Founder's Choice</span></li>
+  <li><FaCubes /><span>Founder&apos;s Choice</span></li>
         <li className={styles.menuExpandable}>
           <div className={styles.menuExpandableHeader} onClick={() => setWebsiteUpdateOpen(v => !v)}>
             <FaGlobe />
