@@ -1,3 +1,9 @@
+/* Ensure next/image <Image /> elements inherit img styles */
+image, span[data-nextjs-image-wrapper] > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 @import "tailwindcss";
 
 :root {
